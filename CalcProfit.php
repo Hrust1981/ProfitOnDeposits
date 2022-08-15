@@ -28,16 +28,13 @@ class CalcProfit {
         $dates = new Dates($this->startDate, $this->term);
         $arrDates = $dates->SplitMethod();
 
-        for ($i = 0; $i < $this->term; $i++) {
+        for ($i = 0; $i <= $this->term; $i++) {
             $daysN = cal_days_in_month(CAL_GREGORIAN, $arrDates[$i][1], $arrDates[$i][2]);
-            if ($i == 0) {
+            if ($i == 0 || $i == $this->term-1)
                 $daysN -= $arrDates[$i][0];
-            }
-            else if ($i == $this->term-1) {
-                $daysN -= $arrDates[$i][0];
-            }
+
             $this->deposit = $this->sumLastMonth + ($this->sumLastMonth + $this->sumAdd) * $daysN * ($this->percent / 365);
-            $this->sumLastMonth = $this->deposit;
+            $this->sumLastMonth = $this->sum;
         }
 
 
