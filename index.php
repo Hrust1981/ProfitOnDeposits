@@ -27,10 +27,13 @@
             <input class="date" type="date" id="date" name="date" placeholder="Date">
             <input class="months" type="number" id="term" name="term" placeholder="Срок вклада в мес.">
             <input class="deposit-amount" type="number" id="sum" name="sum" placeholder="Сумма вклада">
-            <input class="interest-rate" type="number" id="percent" name="percent" placeholder="Процентная ставка, % годовых">
-            <input class="deposit" type="number" id="sumAdd" name="sumAdd" placeholder="Сумма пополнения вклада" hidden>
+            <input class="interest-rate" type="number" id="percent" name="percent"
+                   placeholder="Процентная ставка, % годовых">
+            <input class="deposit" value="0" type="number" id="sumAdd" name="sumAdd"
+                   placeholder="Сумма пополнения вклада" hidden>
             <div class="deposit-replenishment">
-                <input class="deposit-replenishment_input" type="checkbox" id="sumAdd-checkbox" name="sumAdd-checkbox">
+                <input class="deposit-replenishment_input" type="checkbox"
+                       id="sumAdd-checkbox" name="sumAdd-checkbox">
                 <p>Ежемесячное пополнение вклада</p>
             </div>
             <div class="error-term" id="errorMess"></div>

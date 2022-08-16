@@ -16,7 +16,7 @@ class Dates {
     private function SplitTermByDate(): array
     {
         $arrDates = array();
-        for ($i = 0; $i <= $this->term; $i++) {
+        for ($i = 1; $i <= $this->term; $i++) {
             $date = new DateTime($this->startDate);
             $interval = new DateInterval('P'. $i. 'M');
             $newDate = $date->add($interval);
@@ -35,7 +35,7 @@ class Dates {
         $splitDatesByParts = array();
         $arrDates = array();
 
-        for ($i = 0; $i <= $this->term; $i++) {
+        for ($i = 1; $i <= $this->term; $i++) {
             $val = str_split($dates[$i], 3);
             for ($j = 0; $j < 3; $j++) {
                 $splitDatesByParts[$j] = $val[$j];

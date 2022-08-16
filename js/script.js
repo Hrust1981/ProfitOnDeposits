@@ -39,7 +39,7 @@ $("#btn-calc").on("click", function () {
             "sum": sum,
             "term": term,
             "percent": percent,
-            "sumAdd": sumAdd !== 0 ? sumAdd : 0
+            "sumAdd": sumAdd
         },
         dataType: 'json',
         beforeSend: function () {
