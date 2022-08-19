@@ -23,7 +23,7 @@ class CalcProfit {
     /**
      * @throws Exception
      */
-    public function Profit()
+    public function Profit(): int
     {
         $dates = new Dates($this->startDate, $this->term);
         $arrDates = $dates->SplitMethod();
